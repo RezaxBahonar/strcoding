@@ -1202,6 +1202,11 @@ faAdd([
 ['For non-time activities: roughly how many seconds each logged unit takes. Analytics uses this to count the activity in time views and score. Leave empty or 0 to use the program default.','برای فعالیت‌های غیرزمانی: هر واحد ثبت‌شده تقریباً چند ثانیه طول می‌کشد. بخش تحلیل با این مقدار، فعالیت را در نمای زمانی و امتیاز حساب می‌کند. خالی یا صفر یعنی استفاده از پیش‌فرض برنامه.'],
 ['For non-time activities: roughly how many seconds each logged unit takes. Analytics uses this to count the activity in time views and score.','برای فعالیت‌های غیرزمانی: هر واحد ثبت‌شده تقریباً چند ثانیه طول می‌کشد. بخش تحلیل با این مقدار، فعالیت را در نمای زمانی و امتیاز حساب می‌کند. خالی یا صفر یعنی استفاده از پیش‌فرض برنامه.']
 ]);
+/* ---- v12.1: date-effective score editing ---- */
+faAdd([
+['applies from','اعمال از'],
+['Score settings are saved with an effective date: the values shown belong to the selected date, and saving applies them from that day onward. Days before that keep the values they had.','تنظیمات امتیاز با تاریخِ اثر ذخیره می‌شوند: مقدارهای نمایش‌داده‌شده مربوط به روز انتخاب‌شده است و ذخیره‌کردن، آن‌ها را از همان روز به بعد اعمال می‌کند. روزهای قبل، مقدارهای خودشان را نگه می‌دارند.']
+]);
 /* ---- i18n runtime: DOM localization, observer, controls ---- */
 const I18N_SKIP_TAGS=new Set(['SCRIPT','STYLE','NOSCRIPT','TEMPLATE','TEXTAREA']);
 function i18nCollectTexts(root){
@@ -1671,9 +1676,21 @@ function upsertActivityHistory(a,effectiveFrom,patch){
   normalizeActivityHistory(a);
   const normalized={effectiveFrom,...activityConfigFromObject(patch)};
   const existing=a.history.findIndex(h=>h.effectiveFrom===effectiveFrom);
+  /* v12.1: اگر تاریخ اثر قبل یا روی اولین snapshot باشد، مقدارهای قبلی برای روزهای قبل از آن تاریخ حفظ می‌شود */
+  const first=a.history[0];
+  if(first&&effectiveFrom<=first.effectiveFrom){
+    const oldFirst=activityConfigFromObject({...a,...first});
+    const diffKeys=['name','category','type','unit','target','savers','priority','min','notes','secondsPerUnit','pointsPerMinute'];
+    if(diffKeys.some(k=>String(oldFirst[k]??'')!==String(normalized[k]??''))){
+      const prev=keyFromDate(new Date(new Date(effectiveFrom+'T12:00:00').getTime()-864e5));
+      const preserver={effectiveFrom:prev,...oldFirst};
+      const ex=a.history.findIndex(h=>h.effectiveFrom===prev);
+      if(ex<0)a.history.push(preserver);else a.history[ex]=preserver;
+    }
+  }
   if(existing>=0)a.history[existing]=normalized;else a.history.push(normalized);
   a.history.sort((x,y)=>x.effectiveFrom.localeCompare(y.effectiveFrom));
-  Object.assign(a,activityCurrentConfig(a));
+  Object.assign(a,activityConfigForDate(a,todayKey()));
 }
 function visibleActivityConfig(a,date){return activityConfigForDate(a,date||selectedDate)}
 
@@ -2875,25 +2892,27 @@ function renderScoreSection(){
   const area=line+` L ${(P+(cum.length-1)*step).toFixed(1)} ${H-P} L ${P} ${H-P} Z`;
   const accent=(getComputedStyle(document.documentElement).getPropertyValue('--accent')||'#7b5cff').trim();
   const cumSvg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:120px;display:block"><path d="${area}" fill="${accent}" opacity=".14"/><path d="${line}" fill="none" stroke="${accent}" stroke-width="2"/><text x="${P}" y="12" fill="var(--muted)" font-size="9">${esc(faSvgTxt(fmt(gTotal)))}</text></svg>`;
-  const cfgRows=acts.map(a=>{const c=activityCurrentConfig(a);const ppm=activityPointsPerMinute(c);const spu=Number(c.secondsPerUnit||0);return `<div class="entryRow scoreCfgRow" data-activity="${esc(a.id)}"><span data-no-i18n="1" title="${esc(c.name)}">${esc(c.name)}</span><span class="scoreCfgInputs" data-no-i18n="1">🏅 <input class="scorePpmInput" type="number" min="0" step="any" value="${ppm}" title="${esc(tt('Points per minute'))}" aria-label="${esc(tt('Points per minute'))}">${c.type!=='time'?` · ⏱️ <input class="scoreSpuInput" type="number" min="0" step="any" value="${spu}" title="${esc(tt('Seconds per unit (approx.)'))}" aria-label="${esc(tt('Seconds per unit (approx.)'))}">`:''}<button class="tinybtn iconOnly scoreCfgSave" title="${esc(tt('Save'))}">💾</button></span></div>`}).join('');
+  const cfgRows=acts.map(a=>{const c=visibleActivityConfig(a,selectedDate);const ppm=activityPointsPerMinute(c);const spu=Number(c.secondsPerUnit||0);return `<div class="entryRow scoreCfgRow" data-activity="${esc(a.id)}"><span data-no-i18n="1" title="${esc(c.name)}">${esc(c.name)}</span><span class="scoreCfgInputs" data-no-i18n="1">🏅 <input class="scorePpmInput" type="number" min="0" step="any" value="${ppm}" title="${esc(tt('Points per minute'))}" aria-label="${esc(tt('Points per minute'))}">${c.type!=='time'?` · ⏱️ <input class="scoreSpuInput" type="number" min="0" step="any" value="${spu}" title="${esc(tt('Seconds per unit (approx.)'))}" aria-label="${esc(tt('Seconds per unit (approx.)'))}">`:''}<button class="tinybtn iconOnly scoreCfgSave" title="${esc(tt('Save'))}">💾</button></span></div>`}).join('');
   return `<div class="panel"><div class="panelhead"><div><h3>${tt('⭐ Score analysis')}</h3><div class="muted">${FA?`${num(acts.length)} فعالیت · ${num(days.length)} روز اخیر`:`${num(acts.length)} activities · last ${num(days.length)} days`}</div></div><div class="pill green">∑ ${esc(fmt(gTotal))}</div></div><div class="metricSection"><div class="helper" style="margin:-2px 0 10px">${tt('Score shows useful work, not just hours: minutes of each activity × its points per minute.')} ${tt('Count activities join through their seconds-per-unit setting.')}</div><div class="chartGrid2">
   <div class="chartCard"><h5>🏆 ${tt('Activity totals')}</h5>${rankHtml}</div>
   <div class="chartCard"><h5>🥧 ${tt('Share of total')}</h5><div class="donutWrap">${donut}<div class="donutLegend">${legend}</div></div></div>
   <div class="chartCard"><h5>📆 ${tt('Weekday pattern')}</h5><div class="muted" style="font-size:9px;margin:-4px 0 8px">${FA?'میانگین امتیاز هر روز هفته در این بازه':'Average points per weekday in this range'}</div>${wkHtml}</div>
   <div class="chartCard"><h5>📈 ${tt('Cumulative total')}</h5>${cumSvg}</div>
-  <div class="chartCard"><h5>${tt('⚙️ Score per activity')}</h5><div class="muted" style="font-size:9px;margin:-4px 0 8px">${FA?'🏅 امتیاز هر دقیقه · ⏱️ زمان هر واحد (ثانیه) — مقدارها را همین‌جا تغییر دهید و با 💾 ذخیره کنید':'🏅 points per minute · ⏱️ seconds per unit (seconds) — edit inline and save with 💾'}</div>${cfgRows}</div>
+  <div class="chartCard"><h5>${tt('⚙️ Score per activity')}</h5><div class="muted" style="font-size:9px;margin:-4px 0 8px">${FA?'🏅 امتیاز هر دقیقه · ⏱️ زمان هر واحد (ثانیه) — مقدارها برای روز انتخاب‌شده است؛ با 💾 ذخیره کنید تا از همان روز به بعد اعمال شود و روزهای قبل مقدار خودشان را نگه دارند':'🏅 points per minute · ⏱️ seconds per unit (seconds) — values are those effective on the selected date; 💾 applies them from that day onward. Earlier days keep their own values.'}</div>${cfgRows}</div>
   </div></div></div>`;
 }
 
 function renderMetricCharts(){const sections=(state.measurementTypes||[]).map(t=>t.id).filter(t=>state.activities.some(a=>a.type===t));const host=$('metricTables');if(!host)return;const html=renderScoreSection()+sections.map(type=>renderMetricChartsSection(type)).join('');host.innerHTML=html||'';attachScoreCfgEditors(host)}
 /* v12: ویرایش درجایی امتیاز هر دقیقه و زمان هر واحد در بخش «امتیاز هر فعالیت» */
+/* v12.1: ویرایش امتیاز از تاریخِ روزِ انتخاب‌شده به بعد اعمال می‌شود؛ روزهای قبل مقدار خودشان را نگه می‌دارند */
 function updateActivityScoreConfig(activityId,partial){
   const a=state.activities.find(x=>x.id===activityId);if(!a)return;
-  const cur=activityConfigForDate(a,todayKey());
+  const effDate=/^\d{4}-\d{2}-\d{2}$/.test(String(selectedDate||''))?selectedDate:todayKey();
   normalizeActivityHistory(a);
-  upsertActivityHistory(a,todayKey(),{...cur,...partial});
-  setPendingHistory('Edit score settings',cur.name||a.name||'');
-  save().then(()=>{render();toast(tt('Score settings updated ✏️'))}).catch(e=>diag('Score config update failed',e?.message||String(e)));
+  const cur=activityConfigForDate(a,effDate);
+  upsertActivityHistory(a,effDate,{...cur,...partial});
+  setPendingHistory('Edit score settings',`${cur.name||a.name||''} · effective ${effDate}`);
+  save().then(()=>{render();toast(`${tt('Score settings updated ✏️')} · ${tt('applies from')} ${fmtDate(effDate)}`)}).catch(e=>diag('Score config update failed',e?.message||String(e)));
 }
 function attachScoreCfgEditors(host){
   if(!host)return;
