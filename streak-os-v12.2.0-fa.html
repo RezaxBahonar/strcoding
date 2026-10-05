@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="description" content="Streak OS — ردیاب خصوصی و محلی عادت‌ها و زنجیره‌ها با تقویم شمسی و میلادی" />
 <meta name="theme-color" content="#090e1b" />
-<title>Streak OS — v12.2.0</title>
+<title>Streak OS — v12.3.0</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237b5cff'/%3E%3Cstop offset='1' stop-color='%234da3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='url(%23g)'/%3E%3Cpath d='M32 12c2.2 6.2 1 10.6-1.8 13.4-2.6 2.6-5.2 4.9-5.2 9.1 0 2.5 1.4 4.9 3.4 6.2-.6-2.9.4-5.3 2.4-7.2.4 3.1 3.2 4.3 3.2 7.4 0 1.3-.5 2.5-1.3 3.4 3.8-1.1 6.6-4.6 6.6-8.7 0-2.4-.9-4.3-2.2-6.1 3.5 1.4 5.9 4.9 5.9 9 0 .8-.1 1.6-.3 2.3 2.4-2.3 3.9-5.6 3.9-9.2 0-8.6-7-11.2-14.6-19.6z' fill='%23fff' opacity='.95'/%3E%3C/svg%3E" />
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237b5cff'/%3E%3Cstop offset='1' stop-color='%234da3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='url(%23g)'/%3E%3Cpath d='M32 12c2.2 6.2 1 10.6-1.8 13.4-2.6 2.6-5.2 4.9-5.2 9.1 0 2.5 1.4 4.9 3.4 6.2-.6-2.9.4-5.3 2.4-7.2.4 3.1 3.2 4.3 3.2 7.4 0 1.3-.5 2.5-1.3 3.4 3.8-1.1 6.6-4.6 6.6-8.7 0-2.4-.9-4.3-2.2-6.1 3.5 1.4 5.9 4.9 5.9 9 0 .8-.1 1.6-.3 2.3 2.4-2.3 3.9-5.6 3.9-9.2 0-8.6-7-11.2-14.6-19.6z' fill='%23fff' opacity='.95'/%3E%3C/svg%3E" />
 <style>
@@ -460,7 +460,7 @@ svg{direction:ltr} /* SVG coordinate systems stay LTR even in RTL mode; Persian 
 <div id="loginView" class="login">
   <div class="loginCard">
     <div class="loginLogo">🔥</div>
-    <h2 id="loginTitle">Streak OS <span class="appVersion">v12.2.0</span></h2>
+    <h2 id="loginTitle">Streak OS <span class="appVersion">v12.3.0</span></h2>
     <p id="loginSub">Your personal streak engine. Data is stored locally in this browser and encrypted with your password.</p>
     <div class="passwordBox"><input id="passwordInput" type="password" autocomplete="current-password" placeholder="Database password (only for encrypted databases)" /><button id="unlockBtn" class="primarybtn">Open</button></div>
     <div class="dbConnectRow"><button id="connectDbLoginBtn" class="ghostbtn" type="button">📂 Connect existing JSON database</button><button id="localDbLoginBtn" class="ghostbtn" type="button">🗄️ Use local database</button></div>
@@ -484,7 +484,7 @@ svg{direction:ltr} /* SVG coordinate systems stay LTR even in RTL mode; Persian 
 
 <div id="appView" class="hidden">
   <header class="topbar">
-    <div class="brand"><button class="ghostbtn iconOnly" id="sidebarToggleBtn" type="button" title="Toggle sidebar">☰</button><div class="brandmark">🔥</div><div><h1>Streak OS <span class="appVersion">v12.2.0</span></h1><small id="brandDate"></small></div></div>
+    <div class="brand"><button class="ghostbtn iconOnly" id="sidebarToggleBtn" type="button" title="Toggle sidebar">☰</button><div class="brandmark">🔥</div><div><h1>Streak OS <span class="appVersion">v12.3.0</span></h1><small id="brandDate"></small></div></div>
     <div class="toolbar">
       <div class="dateNav"><button class="smallbtn iconOnly" id="prevDayBtn" type="button" title="Previous day" aria-label="Previous day">◀️</button><button class="smallbtn iconOnly" id="todayBtn" type="button" title="Today" aria-label="Today">📅</button><input id="selectedDateInput" class="dateInput dpInput" type="text" autocomplete="off" data-dp="1" /><button class="smallbtn iconOnly" id="nextDayBtn" type="button" title="Next day" aria-label="Next day">▶️</button></div>
       <button class="ghostbtn syncPill syncOff" id="syncPill" type="button" title="Cloud sync (GitHub)"><span class="syncPillIcon" id="syncPillIcon">☁️</span><span class="syncPillText" id="syncPillText">Cloud</span></button><button class="ghostbtn iconOnly" id="easyToggleBtn" type="button" data-no-iconify title="حالت آسان — ثبت سریع با کمترین عناصر" aria-label="حالت آسان">⚡</button><button class="ghostbtn iconOnly" id="quickAddBtn" type="button" title="Open the log form for the selected day" aria-label="Open the log form for the selected day">📝</button><span class="undoRedo"><button class="iconbtn undoBtn iconOnly disabled" id="undoBtn" title="Undo the last change" aria-label="Undo">↶</button><button class="iconbtn redoBtn iconOnly disabled" id="redoBtn" title="Redo the last undone change" aria-label="Redo">↷</button></span><button class="iconbtn undoBtn iconOnly" id="lockBtn" title="Lock the application">🔒</button>
@@ -647,7 +647,7 @@ function diag(msg,data){const at=new Date().toISOString();const line=`[${at}] ${
 window.addEventListener('error',e=>diag('window.error',{message:e.message,source:e.filename,line:e.lineno,col:e.colno}));
 window.addEventListener('unhandledrejection',e=>diag('unhandledrejection',{reason:e.reason?.message||String(e.reason)}));
 const DB_NAME='streak-os-db-v2',LEGACY_STORE='vault',META_STORE='meta',ACTIVITIES_STORE='activities',ENTRIES_STORE='entries',AUDIT_STORE='audit_log',DIAG_STORE='diagnostic_log',DB_KEY='app',CORE_META_KEY='core-meta',LOCAL_SECURE_META_KEY='local-secure-meta',JSON_HANDLE_KEY='remembered-json-handle',AUDIT_RETENTION_DAYS=7,DIAG_RETENTION_DAYS=3,MAX_AUDIT_ROWS=1000,MAX_DIAG_ROWS=1000,ITER=310000;
-const APP_VERSION='12.2.0';
+const APP_VERSION='12.3.0';
 let dbReady=false;
 let dbInitError=null;
 let dbInitPromise=null;
@@ -1206,6 +1206,11 @@ faAdd([
 faAdd([
 ['applies from','اعمال از'],
 ['Score settings are saved with an effective date: the values shown belong to the selected date, and saving applies them from that day onward. Days before that keep the values they had.','تنظیمات امتیاز با تاریخِ اثر ذخیره می‌شوند: مقدارهای نمایش‌داده‌شده مربوط به روز انتخاب‌شده است و ذخیره‌کردن، آن‌ها را از همان روز به بعد اعمال می‌کند. روزهای قبل، مقدارهای خودشان را نگه می‌دارند.']
+]);
+/* ---- v12.3: time→count conversion in analytics ---- */
+faAdd([
+['Time logged before switching to counts is converted using the seconds-per-unit rate.','زمان ثبت‌شده پیش از تغییر فعالیت به شمارشی، با نرخِ «زمان هر واحد» به شمارش تبدیل می‌شود.'],
+['≈ converted from logged time','≈ تبدیل‌شده از زمانِ ثبت‌شده']
 ]);
 /* ---- i18n runtime: DOM localization, observer, controls ---- */
 const I18N_SKIP_TAGS=new Set(['SCRIPT','STYLE','NOSCRIPT','TEMPLATE','TEXTAREA']);
@@ -1830,6 +1835,25 @@ function activityMinutesForDate(a,date){
   if(!(total>0))return 0;
   if(cfg.type==='time')return total*unitFactorToBase('time',cfg.unit);
   return total*effectiveSecondsPerUnit(cfg)/60;
+}
+/* v12.3: نرخِ تبدیل زمان‌های گذشته به شمارش — از نخستین پیکربندی شمارشیِ هم‌روز یا پس از آن روز گرفته می‌شود تا با منطق «هر دوره مقدار خودش» هم‌خوان بماند */
+function countUnitSecondsForDate(a,date){
+  const cfg=activityConfigForDate(a,date);
+  if(cfg.type==='count')return effectiveSecondsPerUnit(cfg);
+  const history=Array.isArray(a.history)?a.history:[];
+  for(const h of history){if(h&&h.type==='count'&&h.effectiveFrom>=date)return effectiveSecondsPerUnit(h)}
+  const cur=activityConfigForDate(a,todayKey());
+  return cur.type==='count'?effectiveSecondsPerUnit(cur):0;
+}
+/* v12.3: ارزش شمارشیِ یک روز — روزهای زمانیِ گذشته با «زمان هر واحد» به شمارش تبدیل می‌شود (مثال: ۶۰ دقیقه با نرخ ۶۰ ثانیه = ۱ شمارش) */
+function activityCountForDate(a,date){
+  const cfg=activityConfigForDate(a,date);
+  const total=entryTotal(a,date);
+  if(!(total>0))return 0;
+  if(cfg.type==='count')return total;
+  const spu=countUnitSecondsForDate(a,date);
+  if(!(spu>0))return 0;
+  return activityMinutesForDate(a,date)*60/spu;
 }
 function defaultPointsPerMinute(){const v=Number(state?.settings?.defaultPointsPerMinute);return Number.isFinite(v)&&v>=0?v:1}
 function defaultSecondsPerUnit(){const v=Number(state?.settings?.defaultSecondsPerUnit);return Number.isFinite(v)&&v>=0?v:1}
@@ -2932,6 +2956,8 @@ function metricValueFor(a,date){return entryTotal(a,date)}
 function timelineValueFor(a,date){
   if(analyticsMetricType==='score')return activityPointsForDate(a,date);
   if(analyticsMetricType==='time')return activityMinutesForDate(a,date);
+  /* v12.3: در نمای شمارشی، روزهای زمانیِ گذشته هم به شمارش تبدیل می‌شوند */
+  if(analyticsMetricType==='count')return activityCountForDate(a,date);
   return metricValueFor(a,date);
 }
 function fmtQtyFor(type,unit,v){const n=Number(v||0);if(type==='score'){const r=Math.round(n*10)/10;const s=Number.isInteger(r)?String(r):r.toFixed(1);return `${uiLang()==='fa'?faNumStr(s):s} ${tt('pts')}`}if(type==='time')return fmtHours(n);const s=Number.isInteger(n)?String(n):n.toFixed(2).replace(/\.00$/,'');return `${uiLang()==='fa'?faNumStr(s):s} ${tt(String(unit))}`}
@@ -2941,7 +2967,7 @@ function analyticsDays(){const end=selectedDate,start=new Date(end+'T12:00:00');
 function themeChartPalette(){const cs=getComputedStyle(document.documentElement);const out=[];['--accent','--accent2','--info','--green','--yellow','--orange','--red'].forEach(v=>{const val=(cs.getPropertyValue(v)||'').trim();if(val&&val!=='undefined'&&!out.includes(val))out.push(val)});if(!out.length)out.push('#7b5cff');return out}
 function themeChartColor(i){const p=themeChartPalette();return p[((i%p.length)+p.length)%p.length]}
 function timelineSvg(days,acts){const width=Math.max(820,days.length*30+70),height=300,left=48,right=16,top=20,bottom=42,chartH=height-top-bottom,plotW=width-left-right;const vals=days.map(d=>acts.reduce((s,a)=>s+timelineValueFor(a,d),0));const max=Math.max(1,...vals);const step=plotW/days.length;let svg=`<svg class="chartSvg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">`;for(let i=0;i<=4;i++){const y=top+chartH-(chartH*i/4);svg+=`<line x1="${left}" y1="${y}" x2="${width-right}" y2="${y}" class="gridLine"/><text x="${left-7}" y="${y+3}" text-anchor="end" class="axisLabel">${metricAxisValue(max*i/4).toFixed(1)}</text>`}days.forEach((d,i)=>{const bw=Math.max(4,step*0.65),x=left+i*step+(step-bw)/2,selected=d===analyticsSelectedDate;let y=top+chartH,any=false;acts.forEach((a,ai)=>{const v=timelineValueFor(a,d);if(!(v>0))return;any=true;const bh=(v/max)*chartH;y-=bh;svg+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0.6,bh).toFixed(1)}" rx="1.5" class="bar ${selected?'selected':''}" fill="${themeChartColor(ai)}" opacity="${selected?'0.95':'0.8'}" stroke="${selected?'var(--text)':'none'}" stroke-width="${selected?'1.4':'0'}" data-chart-date="${d}"><title data-no-i18n="1">${esc(a.name+' · '+metricDisplay(v))}</title></rect>`});if(!any)svg+=`<rect x="${x.toFixed(1)}" y="${(top+chartH-2).toFixed(1)}" width="${bw.toFixed(1)}" height="2" rx="1" class="bar ${selected?'selected':''}" fill="var(--line)" opacity=".85" data-chart-date="${d}"/>`;svg+=`<text x="${x+bw/2}" y="${height-17}" text-anchor="middle" class="axisLabel" transform="rotate(-55 ${x+bw/2} ${height-17})">${new Date(d+'T12:00:00').toLocaleDateString(uiLocale(),{month:'numeric',day:'numeric'})}</text>`});const avgV=vals.reduce((s,v)=>s+v,0)/(vals.length||1);if(avgV>0){const ay=top+chartH-(avgV/max)*chartH;svg+=`<line x1="${left}" y1="${ay.toFixed(1)}" x2="${width-right}" y2="${ay.toFixed(1)}" stroke="#8fa0c5" stroke-width="1.2" stroke-dasharray="5 4" opacity=".55"/><text x="${left+6}" y="${(ay-5).toFixed(1)}" text-anchor="start" class="axisLabel">${faSvgTxt(tt('avg')+' '+(uiLang()==='fa'?faNumStr(metricAxisValue(avgV).toFixed(1)):metricAxisValue(avgV).toFixed(1)))}</text>`};svg+='</svg>';return{svg,width}}
-function renderAnalytics(){if(!state)return;renderAnalyticsControls();renderActivityHeatmap();renderAnalyticsKpis();const acts=metricActivities(),days=analyticsDays();$('timelinePanel').innerHTML=`<div class="chartBox"><div class="chartMeta"><div><div class="chartTitle">Daily timeline · ${esc(analyticsMetricType)}${analyticsMetricType==='time'?' (hours)':''}</div><div class="chartSub">Click a day to drill down. ${acts.length} activities in this metric group.</div></div><div class="pill ${acts.length?'green':'danger'}">${analyticsRange} days</div></div>${acts.length?`<div class="svgWrap">${timelineSvg(days,acts).svg}</div>`:'<div class="chartEmpty">No activities match this metric.</div>'}</div>`;
+function renderAnalytics(){if(!state)return;renderAnalyticsControls();renderActivityHeatmap();renderAnalyticsKpis();const acts=metricActivities(),days=analyticsDays();$('timelinePanel').innerHTML=`<div class="chartBox"><div class="chartMeta"><div><div class="chartTitle">Daily timeline · ${esc(analyticsMetricType)}${analyticsMetricType==='time'?' (hours)':''}</div><div class="chartSub">Click a day to drill down. ${acts.length} activities in this metric group.${analyticsMetricType==='count'&&acts.some(a=>(Array.isArray(a.history)?a.history:[]).some(h=>h&&h.type==='time'))?` ${tt('Time logged before switching to counts is converted using the seconds-per-unit rate.')}`:''}</div></div><div class="pill ${acts.length?'green':'danger'}">${analyticsRange} days</div></div>${acts.length?`<div class="svgWrap">${timelineSvg(days,acts).svg}</div>`:'<div class="chartEmpty">No activities match this metric.</div>'}</div>`;
  $('timelinePanel').querySelectorAll('[data-chart-date]').forEach(el=>el.addEventListener('click',()=>{analyticsSelectedDate=el.dataset.chartDate;renderAnalytics()}));renderAnalyticsDayDetail(acts);renderMetricCharts();initPanelCollapse();}
 function renderAnalyticsDayDetail(acts){const date=analyticsSelectedDate;const activeActs=acts.map(a=>({a,v:timelineValueFor(a,date)})).filter(x=>x.v>0.0001);if(!activeActs.length){const emptyMsg=analyticsMetricType==='score'?'No points earned on this day.':`No ${esc(analyticsMetricType)} activity logged on this day.`;$('dayDetailPanel').innerHTML=`<div class="chartBox"><div class="chartMeta"><div><div class="chartTitle">${fmtDate(date)}</div><div class="chartSub">${emptyMsg}</div></div></div><div class="chartEmpty">Select another day in the timeline.</div></div>`;return}
  /* v12: نمودار میله‌ای هر فعالیت — دیگر برچسب‌ها روی هم نمی‌افتند */
@@ -2950,7 +2976,7 @@ function renderAnalyticsDayDetail(acts){const date=analyticsSelectedDate;const a
  sorted.forEach((x,i)=>{const cx=left+i*step+step/2,bh=Math.max(2,(x.v/max)*chartH),y=baseY-bh,col=colorOf(x.a),nm=x.a.name.length>nameLen?x.a.name.slice(0,nameLen-1)+'…':x.a.name;parts+=`<rect x="${(cx-bw/2).toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="4" fill="${col}" opacity=".92"><title data-no-i18n="1">${esc(x.a.name+' · '+metricDisplay(x.v))}</title></rect>`;parts+=`<text x="${cx.toFixed(1)}" y="${(y-5).toFixed(1)}" text-anchor="middle" fill="var(--text)" font-size="9.5" data-no-i18n="1">${esc(faSvgTxt(metricDisplay(x.v)))}</text>`;parts+=`<text x="${cx.toFixed(1)}" y="${baseY+14}" text-anchor="end" class="axisLabel" font-size="10" transform="rotate(${rot} ${cx.toFixed(1)} ${baseY+14})" data-no-i18n="1">${esc(faSvgTxt(nm))}</text>`});
  const grid=[0.25,0.5,0.75,1].map(f=>`<line x1="${left}" y1="${(baseY-chartH*f).toFixed(1)}" x2="${W-right}" y2="${(baseY-chartH*f).toFixed(1)}" class="gridLine"/><text x="${left-6}" y="${(baseY-chartH*f+3).toFixed(1)}" text-anchor="end" class="axisLabel" font-size="9">${esc(faSvgTxt(metricAxisValue(max*f).toFixed(1)))}</text>`).join('');
  const svg=`<svg class="stackSvg" viewBox="0 0 ${W} ${H}" style="height:auto"><text x="${left}" y="21" fill="var(--muted)" font-size="10">${esc(date)}</text>${grid}<line x1="${left}" y1="${baseY}" x2="${W-right}" y2="${baseY}" class="gridLine"/>${parts}<text x="${W-right}" y="${H-6}" text-anchor="end" fill="var(--muted)" font-size="10">${tt('Total')} · ${esc(faSvgTxt(metricDisplay(total)))}</text></svg>`;
- $('dayDetailPanel').innerHTML=`<div class="chartBox"><div class="chartMeta"><div><div class="chartTitle">${fmtDate(date)} · stacked detail</div><div class="chartSub">${tt('Each bar shows one activity of the selected day in the selected metric/unit.')}</div></div><div class="pill green">${activeActs.length} active</div></div><div class="dayInsight"><div class="stackCard">${svg}</div><div class="stackCard"><h4>Day breakdown</h4><div>${sorted.map(x=>`<div class="entryRow"><span data-no-i18n="1"><i class="breakdownDot" style="background:${colorOf(x.a)}"></i>${esc(x.a.name)}</span><strong>${analyticsMetricType==='time'&&x.a.type!=='time'?'<span class="muted" title="≈ estimated from seconds per unit">≈</span> ':''}${metricDisplay(x.v)}</strong></div>`).join('')}</div></div></div></div>`}
+ $('dayDetailPanel').innerHTML=`<div class="chartBox"><div class="chartMeta"><div><div class="chartTitle">${fmtDate(date)} · stacked detail</div><div class="chartSub">${tt('Each bar shows one activity of the selected day in the selected metric/unit.')}</div></div><div class="pill green">${activeActs.length} active</div></div><div class="dayInsight"><div class="stackCard">${svg}</div><div class="stackCard"><h4>Day breakdown</h4><div>${sorted.map(x=>`<div class="entryRow"><span data-no-i18n="1"><i class="breakdownDot" style="background:${colorOf(x.a)}"></i>${esc(x.a.name)}</span><strong>${analyticsMetricType==='time'&&x.a.type!=='time'?'<span class="muted" title="≈ estimated from seconds per unit">≈</span> ':''}${analyticsMetricType==='count'&&activityConfigForDate(x.a,date).type!=='count'?`<span class="muted" title="${esc(tt('≈ converted from logged time'))}">≈</span> `:''}${metricDisplay(x.v)}</strong></div>`).join('')}</div></div></div></div>`}
 function renderScoreSection(){
   const acts=state.activities;if(!acts.length)return '';
   const days=analyticsDays();const FA=uiLang()==='fa';const num=n=>FA?faNumStr(String(n)):String(n);
@@ -3031,11 +3057,13 @@ function renderMetricChartsSection(type){
   const acts=state.activities.filter(a=>a.type===type);if(!acts.length)return '';
   const groups=[...new Set(acts.map(a=>a.unit))].map(u=>({unit:u,acts:acts.filter(a=>a.unit===u)}));
   const days=analyticsDays();const FA=uiLang()==='fa';const num=n=>FA?faNumStr(String(n)):String(n);
+  /* v12.3: در بخش شمارشی، روزهای زمانیِ گذشته هم با نرخ تبدیل محاسبه می‌شوند */
+  const valFor=(a,d)=>type==='count'?activityCountForDate(a,d):metricValueFor(a,d);
   return groups.map(g=>{
-    const perDay=days.map(d=>g.acts.reduce((s,a)=>s+metricValueFor(a,d),0));
+    const perDay=days.map(d=>g.acts.reduce((s,a)=>s+valFor(a,d),0));
     if(!perDay.some(v=>v>0))return '';
     const gTotal=perDay.reduce((s,v)=>s+v,0);
-    const totals=g.acts.map(a=>({a,v:days.reduce((s,d)=>s+metricValueFor(a,d),0)}));
+    const totals=g.acts.map(a=>({a,v:days.reduce((s,d)=>s+valFor(a,d),0)}));
     const grand=gTotal||1;
     const rank=totals.slice().sort((x,y)=>y.v-x.v);
     const fmt=v=>fmtQtyFor(type,g.unit,v);
@@ -3058,7 +3086,7 @@ function renderMetricChartsSection(type){
     const area=line+` L ${(P+(cum.length-1)*step).toFixed(1)} ${H-P} L ${P} ${H-P} Z`;
     const accent=(getComputedStyle(document.documentElement).getPropertyValue('--accent')||'#7b5cff').trim();
     const cumSvg=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:120px;display:block"><path d="${area}" fill="${accent}" opacity=".14"/><path d="${line}" fill="none" stroke="${accent}" stroke-width="2"/><text x="${P}" y="12" fill="var(--muted)" font-size="9">${esc(faSvgTxt(fmt(gTotal)))}</text></svg>`;
-    return `<div class="panel"><div class="panelhead"><div><h3>📊 ${esc(tt(measurementTypeName(type)))} · ${esc(tt(String(g.unit)))}</h3><div class="muted">${FA?`${num(g.acts.length)} فعالیت · ${num(days.length)} روز اخیر`:`${num(g.acts.length)} activities · last ${num(days.length)} days`}</div></div><div class="pill green">∑ ${esc(fmt(gTotal))}</div></div><div class="metricSection"><div class="chartGrid2">
+    return `<div class="panel"><div class="panelhead"><div><h3>📊 ${esc(tt(measurementTypeName(type)))} · ${esc(tt(String(g.unit)))}</h3><div class="muted">${FA?`${num(g.acts.length)} فعالیت · ${num(days.length)} روز اخیر`:`${num(g.acts.length)} activities · last ${num(days.length)} days`}${type==='count'&&g.acts.some(a=>(Array.isArray(a.history)?a.history:[]).some(h=>h&&h.type==='time'))?` · ${tt('Time logged before switching to counts is converted using the seconds-per-unit rate.')}`:''}</div></div><div class="pill green">∑ ${esc(fmt(gTotal))}</div></div><div class="metricSection"><div class="chartGrid2">
     <div class="chartCard"><h5>🏆 ${tt('Activity totals')}</h5>${rankHtml}</div>
     <div class="chartCard"><h5>🥧 ${tt('Share of total')}</h5><div class="donutWrap">${donut}<div class="donutLegend">${legend}</div></div></div>
     <div class="chartCard"><h5>📆 ${tt('Weekday pattern')}</h5><div class="muted" style="font-size:9px;margin:-4px 0 8px">${FA?'میانگین هر روز هفته در این بازه':'Average value per weekday in this range'}</div>${wkHtml}</div>
