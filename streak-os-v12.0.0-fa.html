@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="description" content="Streak OS — ردیاب خصوصی و محلی عادت‌ها و زنجیره‌ها با تقویم شمسی و میلادی" />
 <meta name="theme-color" content="#090e1b" />
-<title>Streak OS — v12.0.0</title>
+<title>Streak OS — v12.2.0</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237b5cff'/%3E%3Cstop offset='1' stop-color='%234da3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='url(%23g)'/%3E%3Cpath d='M32 12c2.2 6.2 1 10.6-1.8 13.4-2.6 2.6-5.2 4.9-5.2 9.1 0 2.5 1.4 4.9 3.4 6.2-.6-2.9.4-5.3 2.4-7.2.4 3.1 3.2 4.3 3.2 7.4 0 1.3-.5 2.5-1.3 3.4 3.8-1.1 6.6-4.6 6.6-8.7 0-2.4-.9-4.3-2.2-6.1 3.5 1.4 5.9 4.9 5.9 9 0 .8-.1 1.6-.3 2.3 2.4-2.3 3.9-5.6 3.9-9.2 0-8.6-7-11.2-14.6-19.6z' fill='%23fff' opacity='.95'/%3E%3C/svg%3E" />
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237b5cff'/%3E%3Cstop offset='1' stop-color='%234da3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='60' height='60' rx='15' fill='url(%23g)'/%3E%3Cpath d='M32 12c2.2 6.2 1 10.6-1.8 13.4-2.6 2.6-5.2 4.9-5.2 9.1 0 2.5 1.4 4.9 3.4 6.2-.6-2.9.4-5.3 2.4-7.2.4 3.1 3.2 4.3 3.2 7.4 0 1.3-.5 2.5-1.3 3.4 3.8-1.1 6.6-4.6 6.6-8.7 0-2.4-.9-4.3-2.2-6.1 3.5 1.4 5.9 4.9 5.9 9 0 .8-.1 1.6-.3 2.3 2.4-2.3 3.9-5.6 3.9-9.2 0-8.6-7-11.2-14.6-19.6z' fill='%23fff' opacity='.95'/%3E%3C/svg%3E" />
 <style>
@@ -460,7 +460,7 @@ svg{direction:ltr} /* SVG coordinate systems stay LTR even in RTL mode; Persian 
 <div id="loginView" class="login">
   <div class="loginCard">
     <div class="loginLogo">🔥</div>
-    <h2 id="loginTitle">Streak OS <span class="appVersion">v12.0.0</span></h2>
+    <h2 id="loginTitle">Streak OS <span class="appVersion">v12.2.0</span></h2>
     <p id="loginSub">Your personal streak engine. Data is stored locally in this browser and encrypted with your password.</p>
     <div class="passwordBox"><input id="passwordInput" type="password" autocomplete="current-password" placeholder="Database password (only for encrypted databases)" /><button id="unlockBtn" class="primarybtn">Open</button></div>
     <div class="dbConnectRow"><button id="connectDbLoginBtn" class="ghostbtn" type="button">📂 Connect existing JSON database</button><button id="localDbLoginBtn" class="ghostbtn" type="button">🗄️ Use local database</button></div>
@@ -484,7 +484,7 @@ svg{direction:ltr} /* SVG coordinate systems stay LTR even in RTL mode; Persian 
 
 <div id="appView" class="hidden">
   <header class="topbar">
-    <div class="brand"><button class="ghostbtn iconOnly" id="sidebarToggleBtn" type="button" title="Toggle sidebar">☰</button><div class="brandmark">🔥</div><div><h1>Streak OS <span class="appVersion">v12.0.0</span></h1><small id="brandDate"></small></div></div>
+    <div class="brand"><button class="ghostbtn iconOnly" id="sidebarToggleBtn" type="button" title="Toggle sidebar">☰</button><div class="brandmark">🔥</div><div><h1>Streak OS <span class="appVersion">v12.2.0</span></h1><small id="brandDate"></small></div></div>
     <div class="toolbar">
       <div class="dateNav"><button class="smallbtn iconOnly" id="prevDayBtn" type="button" title="Previous day" aria-label="Previous day">◀️</button><button class="smallbtn iconOnly" id="todayBtn" type="button" title="Today" aria-label="Today">📅</button><input id="selectedDateInput" class="dateInput dpInput" type="text" autocomplete="off" data-dp="1" /><button class="smallbtn iconOnly" id="nextDayBtn" type="button" title="Next day" aria-label="Next day">▶️</button></div>
       <button class="ghostbtn syncPill syncOff" id="syncPill" type="button" title="Cloud sync (GitHub)"><span class="syncPillIcon" id="syncPillIcon">☁️</span><span class="syncPillText" id="syncPillText">Cloud</span></button><button class="ghostbtn iconOnly" id="easyToggleBtn" type="button" data-no-iconify title="حالت آسان — ثبت سریع با کمترین عناصر" aria-label="حالت آسان">⚡</button><button class="ghostbtn iconOnly" id="quickAddBtn" type="button" title="Open the log form for the selected day" aria-label="Open the log form for the selected day">📝</button><span class="undoRedo"><button class="iconbtn undoBtn iconOnly disabled" id="undoBtn" title="Undo the last change" aria-label="Undo">↶</button><button class="iconbtn redoBtn iconOnly disabled" id="redoBtn" title="Redo the last undone change" aria-label="Redo">↷</button></span><button class="iconbtn undoBtn iconOnly" id="lockBtn" title="Lock the application">🔒</button>
@@ -647,7 +647,7 @@ function diag(msg,data){const at=new Date().toISOString();const line=`[${at}] ${
 window.addEventListener('error',e=>diag('window.error',{message:e.message,source:e.filename,line:e.lineno,col:e.colno}));
 window.addEventListener('unhandledrejection',e=>diag('unhandledrejection',{reason:e.reason?.message||String(e.reason)}));
 const DB_NAME='streak-os-db-v2',LEGACY_STORE='vault',META_STORE='meta',ACTIVITIES_STORE='activities',ENTRIES_STORE='entries',AUDIT_STORE='audit_log',DIAG_STORE='diagnostic_log',DB_KEY='app',CORE_META_KEY='core-meta',LOCAL_SECURE_META_KEY='local-secure-meta',JSON_HANDLE_KEY='remembered-json-handle',AUDIT_RETENTION_DAYS=7,DIAG_RETENTION_DAYS=3,MAX_AUDIT_ROWS=1000,MAX_DIAG_ROWS=1000,ITER=310000;
-const APP_VERSION='12.0.0';
+const APP_VERSION='12.2.0';
 let dbReady=false;
 let dbInitError=null;
 let dbInitPromise=null;
@@ -1300,6 +1300,7 @@ function setUiCalendar(cal){
   const next=cal==='gregorian'?'gregorian':'persian';
   if(next===__uiCal)return;
   __uiCal=next;i18nStore.set(I18N_CAL_KEY,__uiCal);
+  if(state){ensureViewSettings(state);normalizeUi(state);state.viewSettings.ui.cal=next;scheduleUiPrefPersist()} /* v12.2: در دیتابیس هم ذخیره می‌شود */
   const dt=new Date(selectedDate+'T12:00:00');
   if(!Number.isNaN(dt.getTime()))historyCursor=calendarMonthStart(dt);
   if(typeof dpClose==='function')dpClose();
@@ -1461,7 +1462,8 @@ window.addEventListener('scroll',e=>{if(!dpOpenFor)return;if(e.target===dpOpenFo
 /* ================= collapsible sidebar ================= */
 const SIDEBAR_KEY='streakos.ui.sidebar';
 function applySidebarMode(){
-  const mode=i18nStore.get(SIDEBAR_KEY)==='collapsed'?'collapsed':'open';
+  const pref=uiPrefFromState('sidebarCollapsed');
+  const mode=((pref!==undefined?!!pref:(i18nStore.get(SIDEBAR_KEY)==='collapsed'))?'collapsed':'open');
   document.documentElement.setAttribute('data-sidebar',mode);
   const b=$('sidebarToggleBtn');
   if(b)b.textContent=mode==='collapsed'?'☰':(document.documentElement.getAttribute('dir')==='rtl'?'▶':'◀');
@@ -1469,22 +1471,27 @@ function applySidebarMode(){
 function toggleSidebar(){
   if(easyModeOn())return; /* v10.1: در حالت آسان سایدبار مخفی است — تاخل بی‌اثر */
   const collapsed=document.documentElement.getAttribute('data-sidebar')==='collapsed';
-  i18nStore.set(SIDEBAR_KEY,collapsed?'open':'collapsed');
-  applySidebarMode();
+  const nextVal=!collapsed;
+  if(state){ensureViewSettings(state);normalizeUi(state);state.viewSettings.ui.sidebarCollapsed=nextVal}
+  i18nStore.set(SIDEBAR_KEY,nextVal?'collapsed':'open');
+  applySidebarMode();scheduleUiPrefPersist(); /* v12.2: در دیتابیس هم ذخیره می‌شود */
 }
 applySidebarMode();
 /* ================= v10.2: collapsible topbar ================= */
 const TOPBAR_KEY='streakos.ui.topbar';
 function applyTopbarMode(){
-  const c=i18nStore.get(TOPBAR_KEY)==='collapsed';
+  const pref=uiPrefFromState('topbarCollapsed');
+  const c=(pref!==undefined?!!pref:(i18nStore.get(TOPBAR_KEY)==='collapsed'));
   document.documentElement.setAttribute('data-topbar',c?'collapsed':'open');
   const b=$('topbarToggleBtn');
   if(b)b.textContent=c?'▾':'▴';
 }
 function toggleTopbar(){
   const c=document.documentElement.getAttribute('data-topbar')==='collapsed';
-  i18nStore.set(TOPBAR_KEY,c?'open':'collapsed');
-  applyTopbarMode();
+  const nextVal=!c;
+  if(state){ensureViewSettings(state);normalizeUi(state);state.viewSettings.ui.topbarCollapsed=nextVal}
+  i18nStore.set(TOPBAR_KEY,nextVal?'collapsed':'open');
+  applyTopbarMode();scheduleUiPrefPersist(); /* v12.2: در دیتابیس هم ذخیره می‌شود */
 }
 applyTopbarMode();
 /* extra FA patterns: standalone numbers, percentages, per-activity history subtitle */
@@ -1710,6 +1717,9 @@ function normalizeState(s){
   if(!Number.isFinite(Number(s.settings.defaultSecondsPerUnit)))s.settings.defaultSecondsPerUnit=1;
   if(s.settings.priority!==null&&s.settings.priority!==''&&!Number.isFinite(Number(s.settings.priority)))s.settings.priority=null;
   ensureViewSettings(s);
+  /* v12.2: per-device appearance bundles (each device keeps its own viewSettings copy) */
+  s.devices=(s.devices&&typeof s.devices==='object'&&!Array.isArray(s.devices))?s.devices:{};
+  Object.keys(s.devices).forEach(function(k){const b=s.devices[k];if(!b||typeof b!=='object'||!b.viewSettings||typeof b.viewSettings!=='object')delete s.devices[k];else{b.deviceName=String(b.deviceName||'');b.platform=String(b.platform||'');b.updatedAt=String(b.updatedAt||'')}});
   s.activities.forEach(a=>{
     if(a.priority===undefined)a.priority=null;
     if(!a.createdAt)a.createdAt=todayKey()+'T12:00:00';
@@ -1906,7 +1916,7 @@ async function migrateLegacyMeta(){
 }
 async function getLegacyApp(){try{return await idbStoreGet(LEGACY_STORE,DB_KEY)}catch{return null}}
 let localVaultEncrypted=false,localVaultSalt=null,localVaultKey=null;
-function coreMetaFromState(s){return{version:s.version||2,createdAt:s.createdAt||new Date().toISOString(),settings:JSON.parse(JSON.stringify(s.settings||{})),viewSettings:JSON.parse(JSON.stringify(s.viewSettings||defaultViewSettings())),measurementTypes:JSON.parse(JSON.stringify(s.measurementTypes||cloneDefaultMeasurements()))}}
+function coreMetaFromState(s){return{version:s.version||2,createdAt:s.createdAt||new Date().toISOString(),settings:JSON.parse(JSON.stringify(s.settings||{})),viewSettings:JSON.parse(JSON.stringify(s.viewSettings||defaultViewSettings())),measurementTypes:JSON.parse(JSON.stringify(s.measurementTypes||cloneDefaultMeasurements())),devices:JSON.parse(JSON.stringify(s.devices||{}))}}
 async function protectStructuredRecord(obj){if(!localVaultEncrypted||!localVaultKey)return obj;const id=obj.id;const payload=await encrypt(obj,localVaultKey);return{id,encrypted:true,payload}}
 async function unprotectStructuredRecord(obj){if(!obj)return null;if(obj.encrypted&&obj.payload){if(!localVaultKey)throw new Error('Database key is not ready.');return await decrypt(obj.payload,localVaultKey)}return obj}
 async function protectCoreMeta(meta){if(!localVaultEncrypted||!localVaultKey)return{encrypted:false,data:meta};return{encrypted:true,payload:await encrypt(meta,localVaultKey)}}
@@ -2000,6 +2010,7 @@ function currentDbPassword(){return $('jsonDbPassword')?.value||$('passwordInput
 async function cacheLocalState(){try{await persistStructuredState(null,state,{seedAudit:true});await flushAuditQueue();await flushDiagnosticQueue()}catch(e){diag('Structured database save failed',e?.message||String(e));throw e}}
 async function save(){
   if(!state){diag('Save skipped',{hasState:false});clearPendingHistory();return}
+  try{refreshOwnDeviceBundle()}catch(e){} /* v12.2: per-device appearance rides along with every save */
   const previousSnapshot=lastSavedSnapshot?structuredClone(lastSavedSnapshot):null;
   const before=comparableState(lastSavedSnapshot||state);
   prepareUndoForSave();
@@ -2071,10 +2082,16 @@ async function connectLoginDatabase(){
 }
 async function finishOpenState(nextState,message='Database opened'){
   if(!nextState)throw new Error('Database data is empty.');
-  state=normalizeState(nextState);normalizeUi(state);
+  state=normalizeState(nextState);
+  await ensureDeviceProfile(); /* v12.2: identity of this device for per-device appearance */
+  adoptOwnDeviceAppearance(); /* v12.2: this device stays committed to its own look */
+  normalizeUi(state);
+  applyUiPreferencesFromState(); /* v12.2: sidebar/topbar/easy/calendar from the database */
   $('passwordInput').value='';
   if(!jsonDbEncrypted){cryptoKey=null;$('passwordInput').dataset.dbPassword='';if($('jsonDbPassword'))$('jsonDbPassword').value=''}
-  resetHistoryStacks();applyAppearance();showApp();updateJsonDbUi(message);await cacheLocalState();
+  resetHistoryStacks();applyAppearance();showApp();updateJsonDbUi(message);
+  refreshOwnDeviceBundle(); /* v12.2: register/refresh this device's appearance bundle */
+  await cacheLocalState();
 }
 async function autoOpenRememberedDatabase(){
   const handle=await getRememberedJsonHandle();if(!handle||!handle.getFile)return false;
@@ -2135,16 +2152,17 @@ async function unlock(password){
     jsonDbEncrypted=detectedEncrypted;
     if(jsonDbEncrypted){$('passwordInput').dataset.dbPassword=password||'';if($('jsonDbPassword'))$('jsonDbPassword').value=password||''}
     else{$('passwordInput').dataset.dbPassword='';if($('jsonDbPassword'))$('jsonDbPassword').value=''}
-    state=await parsePortableDatabase(text);normalizeState(state);normalizeUi(state);
+    state=await parsePortableDatabase(text);normalizeState(state);await applyDeviceAwareness();
     await cacheLocalState();resetHistoryStacks();applyAppearance();showApp();updateJsonDbUi('JSON database opened');return;
   }
   const loaded=await loadStructuredState(password||'');
   if(!loaded){
     state=defaultState();normalizeUi(state);localVaultEncrypted=false;localVaultSalt=null;localVaultKey=null;
+    await applyDeviceAwareness();
     $('passwordInput').dataset.dbPassword=password||'';jsonDbEncrypted=false;cryptoKey=null;
     await cacheLocalState();resetHistoryStacks();applyAppearance();showApp();toast('Structured local database created');return;
   }
-  state=normalizeState(loaded);normalizeUi(state);jsonDbEncrypted=false;cryptoKey=localVaultKey||null;
+  state=normalizeState(loaded);normalizeUi(state);await applyDeviceAwareness();jsonDbEncrypted=false;cryptoKey=localVaultKey||null;
   $('passwordInput').dataset.dbPassword=password||'';if($('jsonDbPassword'))$('jsonDbPassword').value='';
   if(localVaultEncrypted)await hydrateDiagnosticLog();
   resetHistoryStacks();applyAppearance();showApp();diag('Structured local database opened',{activities:state.activities.length,entries:state.entries.length,auditDays:AUDIT_RETENTION_DAYS});
@@ -2302,9 +2320,67 @@ const THEME_PRESETS={
   mint:{name:'Mint',accent:'#34d399',accent2:'#99f6e4',bg:'#07120f',panel:'#0d211a',panel2:'#133229',panel3:'#091914',card:'#0b1d17',info:'#99f6e4',text:'#ecfff8',line:'#285044'},
   day:{name:'Daylight',accent:'#4f46e5',accent2:'#0ea5e9',bg:'#eef3fb',panel:'#ffffff',panel2:'#f4f7fd',panel3:'#e8eef8',card:'#f4f7fc',info:'#0ea5e9',text:'#172033',line:'#cad5e7'}
 };
-function defaultUi(){return{theme:'midnight',accent:'#7b5cff',accent2:'#4da3ff',bg:'#090e1b',panel:'#10182d',panel2:'#141e38',panel3:'#0c1426',card:'#0d1528',info:'#4da3ff',text:'#eef3ff',line:'#253250',fontScale:1,radius:18,density:1,glow:.4,saverCal:'persian',sidebarW:248}}
-function normalizeUi(target=state){ensureViewSettings(target);if(!target.viewSettings.ui||typeof target.viewSettings.ui!=='object')target.viewSettings.ui=defaultUi();const u=target.viewSettings.ui,d=defaultUi();Object.keys(d).forEach(k=>{if(u[k]===undefined||u[k]===null)u[k]=d[k]});u.fontScale=Math.max(.8,Math.min(1.5,Number(u.fontScale)||1));u.radius=Math.max(8,Math.min(30,Number(u.radius)||18));u.density=Math.max(.7,Math.min(1.4,Number(u.density)||1));u.glow=(u.glow===undefined||u.glow===null||isNaN(Number(u.glow)))?.4:Math.max(0,Math.min(1,Number(u.glow)));if(u.saverCalMigrated!==true){u.saverCal='persian';u.saverCalMigrated=true}else if(u.saverCal!=='persian'&&u.saverCal!=='gregorian')u.saverCal='persian';u.sidebarW=Math.max(200,Math.min(360,Math.round(Number(u.sidebarW)||248)));return u}
+function defaultUi(){return{theme:'midnight',accent:'#7b5cff',accent2:'#4da3ff',bg:'#090e1b',panel:'#10182d',panel2:'#141e38',panel3:'#0c1426',card:'#0d1528',info:'#4da3ff',text:'#eef3ff',line:'#253250',fontScale:1,radius:18,density:1,glow:.4,saverCal:'persian',sidebarW:248,sidebarCollapsed:false,topbarCollapsed:false,easyModeOn:false,settingsCollapse:{},cal:'persian'}}
+function normalizeUi(target=state){ensureViewSettings(target);if(!target.viewSettings.ui||typeof target.viewSettings.ui!=='object')target.viewSettings.ui=defaultUi();const u=target.viewSettings.ui,d=defaultUi();
+/* v12.2: appearance prefs live in the database — seed first-timers from their legacy localStorage mirror so nothing is lost on upgrade */
+if(u.sidebarCollapsed===undefined)u.sidebarCollapsed=i18nStore.get(SIDEBAR_KEY)==='collapsed';
+if(u.topbarCollapsed===undefined)u.topbarCollapsed=i18nStore.get(TOPBAR_KEY)==='collapsed';
+if(u.easyModeOn===undefined)u.easyModeOn=i18nStore.get(EASY_KEY)==='on';
+if(u.settingsCollapse===undefined){try{u.settingsCollapse=JSON.parse(i18nStore.get(SETTINGS_COLLAPSE_KEY)||'{}')}catch(e){u.settingsCollapse={}}}
+if(u.cal===undefined)u.cal=__uiCal;
+Object.keys(d).forEach(k=>{if(u[k]===undefined||u[k]===null)u[k]=d[k]});u.fontScale=Math.max(.8,Math.min(1.5,Number(u.fontScale)||1));u.radius=Math.max(8,Math.min(30,Number(u.radius)||18));u.density=Math.max(.7,Math.min(1.4,Number(u.density)||1));u.glow=(u.glow===undefined||u.glow===null||isNaN(Number(u.glow)))?.4:Math.max(0,Math.min(1,Number(u.glow)));if(u.saverCalMigrated!==true){u.saverCal='persian';u.saverCalMigrated=true}else if(u.saverCal!=='persian'&&u.saverCal!=='gregorian')u.saverCal='persian';u.sidebarW=Math.max(200,Math.min(360,Math.round(Number(u.sidebarW)||248)));u.sidebarCollapsed=!!u.sidebarCollapsed;u.topbarCollapsed=!!u.topbarCollapsed;u.easyModeOn=!!u.easyModeOn;if(!u.settingsCollapse||typeof u.settingsCollapse!=='object'||Array.isArray(u.settingsCollapse))u.settingsCollapse={};if(u.cal!=='persian'&&u.cal!=='gregorian')u.cal='persian';return u}
 function applyAppearance(){const u=normalizeUi().viewSettings?.ui||state.viewSettings.ui,root=document.documentElement;root.style.setProperty('--accent',u.accent);root.style.setProperty('--accent2',u.accent2);root.style.setProperty('--bg',u.bg);root.style.setProperty('--panel',u.panel);root.style.setProperty('--panel2',u.panel2);root.style.setProperty('--panel3',u.panel3);root.style.setProperty('--text',u.text);root.style.setProperty('--line',u.line);root.style.setProperty('--card',u.card);root.style.setProperty('--info',u.info);root.style.setProperty('--ui-font-scale',String(u.fontScale));root.style.setProperty('--ui-radius',String(u.radius));root.style.setProperty('--ui-density',String(u.density));root.style.setProperty('--glow',String(u.glow));root.style.setProperty('--sidebar-w',(Math.max(200,Math.min(360,Math.round(Number(u.sidebarW)||248))))+'px');}
+/* ==================== v12.2: device profile & per-device appearance ====================
+   All appearance settings live in state (→ local database, JSON database file, cloud sync).
+   state.devices[deviceId] keeps each device's own appearance bundle, so mobile and desktop
+   stay committed to their own look while sharing one database. */
+const DEVICE_PROFILE_KEY='deviceProfile';
+let deviceProfile=null,uiPrefPersistTimer=null;
+function detectDevicePlatform(){try{const coarse=window.matchMedia&&matchMedia('(pointer:coarse)').matches;const w=Math.min(screen.width||9999,window.innerWidth||9999);return (coarse||w<=820)?'mobile':'desktop'}catch(e){return 'desktop'}}
+async function ensureDeviceProfile(){
+  if(deviceProfile)return deviceProfile;
+  try{deviceProfile=await idbGet(DEVICE_PROFILE_KEY)}catch(e){deviceProfile=null}
+  if(!deviceProfile||typeof deviceProfile!=='object'||!deviceProfile.deviceId){
+    deviceProfile={deviceId:'dev-'+Math.random().toString(36).slice(2,10),deviceName:'',platform:detectDevicePlatform(),createdAt:new Date().toISOString()};
+    try{await idbPut(DEVICE_PROFILE_KEY,deviceProfile)}catch(e){}
+  }
+  if(!deviceProfile.platform)deviceProfile.platform=detectDevicePlatform();
+  if(csConfig&&csConfig.deviceName)deviceProfile.deviceName=csConfig.deviceName;
+  return deviceProfile;
+}
+function refreshOwnDeviceBundle(){
+  if(!state||!deviceProfile)return;
+  ensureViewSettings(state);normalizeUi(state);
+  const map=(state.devices&&typeof state.devices==='object'&&!Array.isArray(state.devices))?state.devices:{};
+  const id=deviceProfile.deviceId,prev=map[id];
+  const vsNow=JSON.stringify(state.viewSettings),name=(deviceProfile.deviceName||csSuggestDeviceName());
+  if(prev&&prev.viewSettings&&JSON.stringify(prev.viewSettings)===vsNow&&prev.deviceName===name&&prev.platform===deviceProfile.platform)return;
+  map[id]={deviceName:name,platform:deviceProfile.platform,updatedAt:new Date().toISOString(),viewSettings:JSON.parse(JSON.stringify(state.viewSettings))};
+  state.devices=map;
+}
+function adoptOwnDeviceAppearance(){
+  if(!state||!deviceProfile)return;
+  const map=(state.devices&&typeof state.devices==='object'&&!Array.isArray(state.devices))?state.devices:{};
+  const mine=map[deviceProfile.deviceId];
+  if(mine&&mine.viewSettings&&typeof mine.viewSettings==='object'&&Object.keys(mine.viewSettings).length){
+    state.viewSettings=JSON.parse(JSON.stringify(mine.viewSettings));
+  }
+}
+function uiPrefFromState(key){try{if(state&&state.viewSettings&&state.viewSettings.ui&&state.viewSettings.ui[key]!==undefined)return state.viewSettings.ui[key]}catch(e){}return undefined}
+function scheduleUiPrefPersist(){if(!state)return;clearTimeout(uiPrefPersistTimer);uiPrefPersistTimer=setTimeout(function(){save().catch(function(e){diag('UI preference save failed',e&&e.message||String(e))})},900)}
+function applyUiPreferencesFromState(){
+  const u=(state&&state.viewSettings&&state.viewSettings.ui)||null;
+  if(u&&u.cal){__uiCal=(u.cal==='gregorian'?'gregorian':'persian');i18nStore.set(I18N_CAL_KEY,__uiCal)}
+  applySidebarMode();applyTopbarMode();applyEasyMode();applySettingsCollapse();
+  try{syncCalendarControls()}catch(e){}
+}
+async function applyDeviceAwareness(){ /* v12.2: identity + own appearance + db-backed prefs */
+  await ensureDeviceProfile();
+  adoptOwnDeviceAppearance();
+  normalizeUi(state);
+  applyUiPreferencesFromState();
+  refreshOwnDeviceBundle();
+}
 function themeObject(key){const t=THEME_PRESETS[key]||THEME_PRESETS.midnight;return{...defaultUi(),theme:key,accent:t.accent,accent2:t.accent2,bg:t.bg,panel:t.panel,panel2:t.panel2,panel3:t.panel3,text:t.text,line:t.line,card:t.card||'#0d1528',info:t.info||'#4da3ff'}}
 function renderThemeControls(){if(!$('themePreset'))return;const u=normalizeUi();const sel=$('themePreset');sel.innerHTML=Object.entries(THEME_PRESETS).map(([k,v])=>`<option value="${k}">${v.name}</option>`).join('')+'<option value="custom">Custom</option>';sel.value=THEME_PRESETS[u.theme]?u.theme:'custom';$('uiFontScale').value=u.fontScale;$('uiRadius').value=u.radius;$('uiDensity').value=u.density;$('uiGlow').value=u.glow;$('uiSidebarW').value=u.sidebarW;$('uiAccent').value=u.accent;$('uiAccent2').value=u.accent2;$('uiBg').value=u.bg;$('uiPanel').value=u.panel;$('uiText').value=u.text;$('uiLine').value=u.line;$('uiCard').value=u.card;$('uiInfo').value=u.info;const p=$('themePreview');p.style.background=u.panel;p.style.color=u.text;p.style.borderColor=u.line;p.style.boxShadow=`inset 0 0 0 3px ${u.accent}`}
 function updateThemeLive(){const u=normalizeUi(),key=$('themePreset')?.value;if(key&&key!=='custom'&&THEME_PRESETS[key]){const t=themeObject(key);u.theme=t.theme;u.accent=t.accent;u.accent2=t.accent2;u.bg=t.bg;u.panel=t.panel;u.panel2=t.panel2;u.panel3=t.panel3;u.text=t.text;u.line=t.line;u.card=t.card;u.info=t.info;}else{u.theme='custom';u.fontScale=Number($('uiFontScale')?.value||u.fontScale);u.radius=Number($('uiRadius')?.value||u.radius);u.density=Number($('uiDensity')?.value||u.density);{const gv=$('uiGlow')?.value;if(gv!==undefined&&gv!=='')u.glow=Number(gv)}{const sv=$('uiSidebarW')?.value;if(sv!==undefined&&sv!=='')u.sidebarW=Number(sv)}u.accent=$('uiAccent')?.value||u.accent;u.accent2=$('uiAccent2')?.value||u.accent2;u.bg=$('uiBg')?.value||u.bg;u.panel=$('uiPanel')?.value||u.panel;u.text=$('uiText')?.value||u.text;u.line=$('uiLine')?.value||u.line;u.card=$('uiCard')?.value||u.card;u.info=$('uiInfo')?.value||u.info;}applyAppearance();const p=$('themePreview');if(p){p.style.background=u.panel;p.style.color=u.text;p.style.borderColor=u.line;p.style.boxShadow=`inset 0 0 0 3px ${u.accent}`}}
@@ -2373,7 +2449,8 @@ const EASY_KEY='streakos.ui.easy';
 function easyModeOn(){return document.documentElement.getAttribute('data-easy')==='on'}
 function easyCfg(){return state?ensureViewSettings().easy:{...EASY_DEFAULTS}}
 function applyEasyMode(){
-  const on=i18nStore.get(EASY_KEY)==='on';
+  const pref=uiPrefFromState('easyModeOn');
+  const on=(pref!==undefined?!!pref:(i18nStore.get(EASY_KEY)==='on'));
   const root=document.documentElement;
   root.setAttribute('data-easy',on?'on':'off');
   const cfg=easyCfg();
@@ -2384,11 +2461,13 @@ function applyEasyMode(){
 }
 function toggleEasyMode(force){
   const on=force!==undefined?!!force:!easyModeOn();
+  if(state){ensureViewSettings(state);normalizeUi(state);state.viewSettings.ui.easyModeOn=on}
   i18nStore.set(EASY_KEY,on?'on':'off');
   applyEasyMode();
   if(on&&typeof activeSection==='string'&&activeSection!=='dashboard'){showSection('dashboard')}
   else if(state){render()}
   toast(on?'حالت آسان روشن شد ⚡':'حالت آسان خاموش شد');
+  scheduleUiPrefPersist(); /* v12.2: در دیتابیس هم ذخیره می‌شود */
 }
 function renderEasyList(arr){
   const cfg=easyCfg();
@@ -2474,7 +2553,16 @@ function renderEasySettings(){
 
 /* ================= v10.2: collapsible panels — every section ================= */
 const SETTINGS_COLLAPSE_KEY='streakos.settings.collapsed.v1';
-function settingsCollapseState(){try{const raw=i18nStore.get(SETTINGS_COLLAPSE_KEY);const o=JSON.parse(raw||'{}');return (o&&typeof o==='object')?o:{}}catch(e){return{}}}
+function settingsCollapseState(){
+  const fromState=uiPrefFromState('settingsCollapse');
+  if(fromState&&typeof fromState==='object')return fromState;
+  try{const raw=i18nStore.get(SETTINGS_COLLAPSE_KEY);const o=JSON.parse(raw||'{}');return (o&&typeof o==='object')?o:{}}catch(e){return{}}
+}
+function settingsCollapseSave(st){ /* v12.2: در دیتابیس هم ذخیره می‌شود */
+  if(state){ensureViewSettings(state);normalizeUi(state);state.viewSettings.ui.settingsCollapse=st}
+  try{i18nStore.set(SETTINGS_COLLAPSE_KEY,JSON.stringify(st))}catch(e){}
+  scheduleUiPrefPersist();
+}
 function settingsPanelId(p){
   if(p.id)return p.id;
   const sec=p.closest('.section');
@@ -2486,7 +2574,7 @@ function settingsPanelId(p){
 function applySettingsCollapse(){const st=settingsCollapseState();document.querySelectorAll('.section .panel').forEach(p=>{p.classList.toggle('collapsed',st[settingsPanelId(p)]===undefined?true:!!st[settingsPanelId(p)])})}
 function expandSettingsPanel(idOrEl){
   const p=typeof idOrEl==='string'?$(idOrEl):idOrEl;if(!p)return;
-  if(p.classList.contains('collapsed')){p.classList.remove('collapsed');const st=settingsCollapseState();st[settingsPanelId(p)]=false;i18nStore.set(SETTINGS_COLLAPSE_KEY,JSON.stringify(st))}
+  if(p.classList.contains('collapsed')){p.classList.remove('collapsed');const st=settingsCollapseState();st[settingsPanelId(p)]=false;settingsCollapseSave(st)}
   try{p.scrollIntoView({behavior:'smooth',block:'start'})}catch(e){}
 }
 function initPanelCollapse(){
@@ -2529,7 +2617,7 @@ function initPanelCollapse(){
         const st=settingsCollapseState();
         const willCollapse=!pp.classList.contains('collapsed');
         st[settingsPanelId(pp)]=willCollapse;
-        i18nStore.set(SETTINGS_COLLAPSE_KEY,JSON.stringify(st));
+        settingsCollapseSave(st);
         pp.classList.toggle('collapsed',willCollapse);
       });
     }
@@ -3206,6 +3294,21 @@ function csMergeThreeWay(baseData,localData,remoteData,localStamp,remoteStamp,lo
       if(chosen!==undefined)merged[k]=chosen;
       silent.push({key:k,resolution:(l!==undefined)?'kept-local':'kept-remote'});return;
     }
+    if(k==='devices'){
+      /* v12.2 per-device appearance bundles: union per device — each device keeps its own copy,
+         newest updatedAt wins per deviceId. Never a conflict; mobile and desktop stay committed
+         to their own appearance settings. */
+      const out={},devSet=new Set([].concat(Object.keys(b||{}),Object.keys(l||{}),Object.keys(r||{})));
+      devSet.forEach(function(d){
+        const bb=(b&&b[d])||null,ll=(l&&l[d])||null,rr=(r&&r[d])||null;
+        let best=null,bestT=-1;
+        [[ll,localStamp],[rr,remoteStamp]].forEach(function(pair){const cand=pair[0];if(!cand||typeof cand!=='object')return;const t=Date.parse(cand.updatedAt)||pair[1]||0;if(t>bestT){best=cand;bestT=t}});
+        const tBase=Date.parse(bb&&bb.updatedAt)||0;
+        out[d]=(best&&(bestT>=tBase||!bb))?best:bb;
+      });
+      merged[k]=out;
+      silent.push({key:k,resolution:'merged-per-device',detail:'Each device keeps its own appearance settings'});return;
+    }
     const localWins=(localStamp>remoteStamp)||(localStamp===remoteStamp&&String(localDeviceId||'')>String(remoteDeviceId||''));
     merged[k]=localWins?l:r;
     conflicts.push({key:k,resolution:localWins?'kept-local':'kept-remote',localStamp:localStamp,remoteStamp:remoteStamp});
@@ -3218,12 +3321,14 @@ async function csLoadState(){
   csMeta=Object.assign(csDefaultMeta(),(await idbGet(CS_META))||{});
   if(!csMeta.deviceId)csMeta.deviceId='dev-'+Math.random().toString(36).slice(2,10);
   if(!csMeta.deviceName&&csConfig.deviceName)csMeta.deviceName=csConfig.deviceName;
+  await ensureDeviceProfile(); /* v12.2: device identity + name for per-device appearance */
+  if(csMeta.deviceName)deviceProfile.deviceName=csMeta.deviceName;
   csLastLocalChangeAt=Number(csMeta.lastLocalChangeAt)||0;
   csLastConflicts=(await idbGet(CS_CONFLICTS))||null;
   csInputsFilled=false;csFillInputs();csInputsFilled=true;
   csRenderPill();csRenderPanel();
 }
-async function csPersistConfig(){await idbPut(CS_CFG,csConfig);if(csMeta){csMeta.deviceName=csConfig.deviceName;try{idbPut(CS_META,csMeta)}catch(e){}}csRestartTimer();csRenderPill()}
+async function csPersistConfig(){await idbPut(CS_CFG,csConfig);if(deviceProfile){deviceProfile.deviceName=csConfig.deviceName||deviceProfile.deviceName;try{idbPut(DEVICE_PROFILE_KEY,deviceProfile)}catch(e){}}if(csMeta){csMeta.deviceName=csConfig.deviceName;try{idbPut(CS_META,csMeta)}catch(e){}}csRestartTimer();csRenderPill()}
 function csReadInputs(){
   const g=function(id){const el=$(id);return el?el.value:''},gc=function(id){const el=$(id);return el?el.checked:false};
   csConfig.enabled=gc('csEnabled');
@@ -3298,6 +3403,7 @@ async function csApplyRemote(data,opts){
     state=normalizeState(JSON.parse(JSON.stringify(data)));
     if(savedVs)state.viewSettings=savedVs;
     normalizeUi(state);
+    refreshOwnDeviceBundle(); /* v12.2: keep this device's appearance bundle authoritative */
     resetHistoryStacks();
     applyAppearance();
     lastSavedSnapshot=snapshotStateForUndo();
@@ -3669,7 +3775,7 @@ $('localDbLoginBtn').onclick=async()=>{
     jsonDbHandle=null;jsonDbConnected=false;jsonDbName='';jsonDbEncrypted=false;state=null;
     const secure=await idbGet(LOCAL_SECURE_META_KEY).catch(()=>null);const meta=await idbGet(CORE_META_KEY).catch(()=>null);const legacy=await getLegacyApp().catch(()=>null);
     if(meta||legacy||secure){await unlock($('passwordInput').value||'');}
-    else{state=defaultState();normalizeUi(state);localVaultEncrypted=false;localVaultSalt=null;localVaultKey=null;cryptoKey=null;await cacheLocalState();resetHistoryStacks();showApp();toast('Structured local database created');}
+    else{state=defaultState();normalizeUi(state);localVaultEncrypted=false;localVaultSalt=null;localVaultKey=null;cryptoKey=null;await applyDeviceAwareness();await cacheLocalState();resetHistoryStacks();showApp();toast('Structured local database created');}
   }catch(e){$('loginError').textContent=e?.message||'Could not open local database.'}
 };
 $('passwordInput').addEventListener('keydown',e=>{if(e.key==='Enter')$('unlockBtn').click()});$('lockBtn').onclick=lock;$('saveDefaultsBtn').onclick=saveDefaults;$('fType').onchange=()=>{syncMeasurementTypeSelect('fType',$('fType').value,null);syncActivityValueFields()};$('dType').onchange=()=>syncMeasurementTypeSelect('dType',$('dType').value,null);$('quickAddBtn').onclick=()=>openLog(null,selectedDate);$('prevDayBtn').onclick=()=>shiftSelectedDate(-1);$('nextDayBtn').onclick=()=>shiftSelectedDate(1);$('todayBtn').onclick=()=>setSelectedDate(todayKey());$('selectedDateInput').onchange=e=>{const v=dpParseInput(e.target,e.target.value);if(v)setSelectedDate(v);};
